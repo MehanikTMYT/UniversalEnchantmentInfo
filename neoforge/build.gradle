@@ -9,8 +9,6 @@ architectury {
 }
 
 def emi_available = emi_enabled == "true" && project.findProperty("${project.name}_emi_enabled") == "true"
-def jei_available = jei_enabled == "true" && project.findProperty("${project.name}_jei_enabled") == "true"
-def rei_available = rei_enabled == "true" && project.findProperty("${project.name}_rei_enabled") == "true"
 def rrv_available = rrv_enabled == "true" && project.findProperty("${project.name}_rrv_enabled") == "true"
 
 loom {
@@ -47,14 +45,6 @@ dependencies {
     if (emi_available) {
         common(project(path: ":common-emi")) { transitive false }
         shadowCommon(project(path: ":common-emi", configuration: "transformProductionNeoForge")) { transitive = false }
-    }
-    if (jei_available) {
-        common(project(path: ":common-jei")) { transitive false }
-        shadowCommon(project(path: ":common-jei", configuration: "transformProductionNeoForge")) { transitive = false }
-    }
-    if (rei_available) {
-        common(project(path: ":common-rei")) { transitive false }
-        shadowCommon(project(path: ":common-rei", configuration: "transformProductionNeoForge")) { transitive = false }
     }
     if (rrv_available) {
         common(project(path: ":common-rrv")) { transitive false }
@@ -118,9 +108,7 @@ publishMods {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
         client = true
         minecraftVersions.add(project.minecraft_version)
-        optional("jei")
         optional("emi")
-        optional("roughly-enough-items")
         optional("rrv")
     }
 
@@ -129,9 +117,7 @@ publishMods {
         accessToken = providers.environmentVariable("MODRINTH_API_KEY")
         environment = CLIENT_ONLY
         minecraftVersions.add(project.minecraft_version)
-        optional("jei")
         optional("emi")
-        optional("rei")
         optional("rrv")
     }
 }

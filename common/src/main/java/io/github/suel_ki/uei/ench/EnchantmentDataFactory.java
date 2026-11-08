@@ -82,8 +82,7 @@ public class EnchantmentDataFactory {
                     targetEnchantment,
                     applicableList,
                     exclusiveBooks,
-                    maxLevelBook
-            ));
+                    maxLevelBook            ));
         }
 
         CACHED_RECIPES = List.copyOf(recipes);

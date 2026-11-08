@@ -2,12 +2,12 @@ package io.github.suel_ki.uei.ench;
 
 import io.github.suel_ki.uei.compat.ApothicCompat;
 import io.github.suel_ki.uei.config.Config;
+import net.minecraft.util.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.EnchantmentTags;
-import net.minecraft.util.Util;
 import net.minecraft.world.item.enchantment.Enchantment;
 
 public record EnchantmentProperties(

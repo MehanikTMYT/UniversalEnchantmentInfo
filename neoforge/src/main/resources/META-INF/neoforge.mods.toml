@@ -41,20 +41,6 @@ ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
-modId="jei"
-type="optional"
-versionRange="${jei_version_range}"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
-modId="rei"
-type="optional"
-versionRange="${rei_version_range}"
-ordering="AFTER"
-side="BOTH"
-
-[[dependencies.${mod_id}]]
 modId="rrv"
 type="optional"
 versionRange="${rrv_version_range}"

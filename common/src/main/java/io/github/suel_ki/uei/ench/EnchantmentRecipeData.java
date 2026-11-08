@@ -42,8 +42,7 @@ public record EnchantmentRecipeData(
             key = translatable.getKey();
         }
 
-        String descKey = key + ".desc";
-        Component description;
+        String descKey = key + ".desc";        Component description;
 
         if (I18n.exists(descKey)) {
             description = Component.translatable(descKey).withStyle(ChatFormatting.BLACK);
@@ -79,8 +78,7 @@ public record EnchantmentRecipeData(
     }
 
     public static EnchantmentRecipeData create(Holder<Enchantment> holder, List<Holder<Item>> applicableItems,
-                                               List<List<ItemStack>> exclusiveStacks, ItemStack maxLevelBook) {
-        EnchantmentProperties props = EnchantmentProperties.of(holder);
+                                               List<List<ItemStack>> exclusiveStacks, ItemStack maxLevelBook) {        EnchantmentProperties props = EnchantmentProperties.of(holder);
 
         String modId = props.modid();
         Component modName = Component.literal(PlatformHelper.getModName(modId)).withStyle(ChatFormatting.ITALIC, ChatFormatting.BLUE);

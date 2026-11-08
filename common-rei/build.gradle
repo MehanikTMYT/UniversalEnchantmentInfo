@@ -1,9 +1,0 @@
-architectury {
-    common(enabled_platforms.split(","))
-}
-
-dependencies {
-    compileOnly project(path: ":common")
-    compileOnlyApi "me.shedaniel:RoughlyEnoughItems-api:${rei_version}"
-    compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin:$rei_version"
-}

@@ -62,7 +62,6 @@ public class Config {
 
     @ConfigSpec(impactsCache = true)
     public boolean lookupEnchantmentsByItem = true;
-
     @ConfigSpec
     public boolean useTextForBooleans = false;
 

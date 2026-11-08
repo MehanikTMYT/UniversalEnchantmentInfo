@@ -12,17 +12,10 @@ include("common")
 if (settings.emi_enabled == "true") {
     include("common-emi")
 }
-if (settings.jei_enabled == "true") {
-    include("common-jei")
-}
-if (settings.rei_enabled == "true") {
-    include("common-rei")
-}
 if (settings.rrv_enabled == "true") {
     include("common-rrv")
 }
 
-include("fabric")
 include("neoforge")
 
 rootProject.name = "UniversalEnchantmentInfo"
